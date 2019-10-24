@@ -108,11 +108,11 @@ if (typeof jQuery !== 'undefined') {
 
   ResponsiveIframe.prototype.allowResponsiveEmbedding = function() {
     if (window.addEventListener) {
-      window.addEventListener("load", self.messageParent, false);
-      window.addEventListener("resize", self.messageParent, false);
+      window.addEventListener("load", function() { self.messageParent(); }, false);
+      window.addEventListener("resize", function() { self.messageParent(); }, false);
     } else if (window.attachEvent) {
-      window.attachEvent("onload", self.messageParent);
-      window.attachEvent("onresize", self.messageParent);
+      window.attachEvent("onload", function() { self.messageParent(); });
+      window.attachEvent("onresize", function() { self.messageParent(); });
     }
   };
 

@@ -1,6 +1,6 @@
-/*! jQuery ResponsiveIframe - v0.0.3 - 2013-09-05
-* https://github.com/npr/responsiveiframe
-* Copyright (c) 2013 Irakli Nadareishvili; Licensed MIT, GPL */
+/*! jQuery ResponsiveIframe - v0.0.4 - 2019-10-25
+* https://github.com/sorgloomer/responsiveiframe
+* Copyright (c) 2019 Tamas Hegedus; Licensed MIT, GPL */
 if (typeof jQuery !== 'undefined') {
   (function( $ ){
     var settings = {
@@ -111,19 +111,19 @@ if (typeof jQuery !== 'undefined') {
 
   ResponsiveIframe.prototype.allowResponsiveEmbedding = function() {
     if (window.addEventListener) {
-      window.addEventListener("load", self.messageParent, false);
-      window.addEventListener("resize", self.messageParent, false);
+      window.addEventListener("load", function() { self.messageParent(); }, false);
+      window.addEventListener("resize", function() { self.messageParent(); }, false);
     } else if (window.attachEvent) {
-      window.attachEvent("onload", self.messageParent);
-      window.attachEvent("onresize", self.messageParent);
+      window.attachEvent("onload", function() { self.messageParent(); });
+      window.attachEvent("onresize", function() { self.messageParent(); });
     }
   };
 
   ResponsiveIframe.prototype.messageParent = function(scrollTop) {
     var h = document.body.offsetHeight;
     h = (scrollTop)? h+'s':h;
-    if(top.postMessage){
-      top.postMessage( h , '*');
+    if(parent.postMessage){
+      parent.postMessage( h , '*');
     } else {
       window.location.hash = 'h'+h;
     }

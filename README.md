@@ -1,15 +1,18 @@
 ## Documentation
 
-[http://npr.github.com/responsiveiframe/](http://npr.github.com/responsiveiframe/)
+[http://npr.github.io/responsiveiframe/](http://npr.github.io/responsiveiframe/)
 
 ## Credits
 
-Built and maintained [@NPR](http://github.com/npr/) by
-* [John Nelson](https://github.com/johnymonster),
-* [Mike Seid](https://github.com/mbseid),
-* [Jared Biehler] (https://github.com/jaredbiehler),
-* [Irakli Nadareishvili](https://github.com/inadarei) and
+Built and maintained by
+
+* [@NPR](http://github.com/npr/)
+* [John Nelson](https://github.com/johnymonster)
+* [Mike Seid](https://github.com/mbseid)
+* [Jared Biehler](https://github.com/jaredbiehler)
+* [Irakli Nadareishvili](https://github.com/inadarei)
 * [Andy Winder](https://github.com/awinder)
+* [Tamas Hegedus](https://github.com/sorgloomer)
 
 Based on the original prototype by [Ioseb Dzmanashvili](https://github.com/ioseb). 
 
@@ -17,7 +20,7 @@ Based on the original prototype by [Ioseb Dzmanashvili](https://github.com/ioseb
 
 The MIT License (MIT)
 
-Copyright (c) 2011-2014 NPR.
+Copyright (c) 2011-2014 Tamas Hegedus.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
